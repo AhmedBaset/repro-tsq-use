@@ -7,7 +7,7 @@ export default function Page() {
 	const { data, promise } = useQuery({
 		queryKey: ["test"],
 		queryFn: async () => {
-			await new Promise((resolve) => setTimeout(resolve, 5000));
+			await new Promise((resolve) => setTimeout(resolve, 2500));
 			return "Success";
 		},
 		experimental_promise: true,
