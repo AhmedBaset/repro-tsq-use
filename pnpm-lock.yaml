@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@tanstack/react-query':
+        specifier: https://pkg.pr.new/@tanstack/react-query@7988
+        version: https://pkg.pr.new/@tanstack/react-query@7988(react@18.3.1)
       next:
         specifier: 14.2.11
         version: 14.2.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -165,6 +168,16 @@ packages:
 
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
+
+  '@tanstack/query-core@https://pkg.pr.new/TanStack/query/@tanstack/query-core@b573cc6':
+    resolution: {tarball: https://pkg.pr.new/TanStack/query/@tanstack/query-core@b573cc6}
+    version: 5.56.2
+
+  '@tanstack/react-query@https://pkg.pr.new/@tanstack/react-query@7988':
+    resolution: {tarball: https://pkg.pr.new/@tanstack/react-query@7988}
+    version: 5.56.2
+    peerDependencies:
+      react: ^18 || ^19
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -1474,6 +1487,13 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
       tslib: 2.7.0
+
+  '@tanstack/query-core@https://pkg.pr.new/TanStack/query/@tanstack/query-core@b573cc6': {}
+
+  '@tanstack/react-query@https://pkg.pr.new/@tanstack/react-query@7988(react@18.3.1)':
+    dependencies:
+      '@tanstack/query-core': https://pkg.pr.new/TanStack/query/@tanstack/query-core@b573cc6
+      react: 18.3.1
 
   '@types/json-schema@7.0.15': {}
 
