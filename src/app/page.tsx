@@ -3,9 +3,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Suspense, use } from "react";
 
-// Because `next build` never completes since it can't generate static page for infinite page
-export const dynamic = "force-dynamic";
-
 export default function Page() {
 	const { data, promise } = useQuery({
 		queryKey: ["test"],
