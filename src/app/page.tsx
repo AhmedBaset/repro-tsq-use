@@ -7,21 +7,17 @@ export default function Page() {
 	const { data, promise } = useQuery({
 		queryKey: ["test"],
 		queryFn: async () => {
-			// await new Promise((resolve) => setTimeout(resolve, 3000));
-			return "test";
+			await new Promise((resolve) => setTimeout(resolve, 5000));
+			return "Success";
 		},
 		experimental_promise: true,
 	});
 
 	return (
 		<div>
-			<h1>Hello World</h1>
-			<Suspense fallback={<div>Loading...</div>}>
-				<Component
-					data={data}
-					// promise={new Promise((res) => setTimeout(res, 3000))}
-					promise={promise}
-				/>
+			<h1 style={{ marginBottom: "1rem" }}>Hello World</h1>
+			<Suspense fallback={<div>Suspending for a few seconds...</div>}>
+				<Component data={data} promise={promise} />
 			</Suspense>
 		</div>
 	);
